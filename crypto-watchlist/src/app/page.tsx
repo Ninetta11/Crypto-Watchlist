@@ -27,6 +27,7 @@ export default async function Home() {
         <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           {data.data.map((token: Token) => (
             <Token
+              key={token.symbol}
               symbol={token.symbol}
               price={Number(token.quote.USD.price).toFixed(2)}
               percent={Number(token.quote.USD.percent_change_1h).toFixed(2)} />
